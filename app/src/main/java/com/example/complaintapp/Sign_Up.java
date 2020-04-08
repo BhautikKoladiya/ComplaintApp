@@ -88,15 +88,11 @@ public class Sign_Up extends AppCompatActivity {
                     return;
                 }
                 else{
-                    int f = 0;
                     for(int i=0;i<10;i++){
                         if(!(phoneNumber.charAt(i) >= '0' && phoneNumber.charAt(i)<= '9')){
-                            f = 1;
+                            vPhone_Number.setError("Pls Enter Valid Phone Number");
+                            return ;
                         }
-                    }
-                    if(f == 1){
-                        vPhone_Number.setError("Pls Enter valid phone Number");
-                        return;
                     }
                 }
 
